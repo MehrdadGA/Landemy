@@ -29,9 +29,9 @@ namespace Landemy
 
         private void btn_masterShow_Click(object sender, EventArgs e)
         {
-            Forms.MasterForm.frmMaster f = new Forms.MasterForm.frmMaster();
-            f.StrFormName = "نام فرم";
-            f.ShowDialog();
+            Forms.DegreeForm degreeForm = new Forms.DegreeForm();
+            degreeForm.StrFormName = "فرم مدارک";
+            degreeForm.ShowDialog();
         }
     }
 }

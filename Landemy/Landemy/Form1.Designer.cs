@@ -28,38 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_masterShow = new System.Windows.Forms.Button();
+            this.btn_DegreeShow = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btn_masterShow
+            // btn_DegreeShow
             // 
-            this.btn_masterShow.Location = new System.Drawing.Point(12, 189);
-            this.btn_masterShow.Name = "btn_masterShow";
-            this.btn_masterShow.Size = new System.Drawing.Size(75, 23);
-            this.btn_masterShow.TabIndex = 1;
-            this.btn_masterShow.Text = "button1";
-            this.btn_masterShow.UseVisualStyleBackColor = true;
-            this.btn_masterShow.Click += new System.EventHandler(this.btn_masterShow_Click);
+            this.btn_DegreeShow.Location = new System.Drawing.Point(21, 60);
+            this.btn_DegreeShow.Name = "btn_DegreeShow";
+            this.btn_DegreeShow.Size = new System.Drawing.Size(75, 23);
+            this.btn_DegreeShow.TabIndex = 1;
+            this.btn_DegreeShow.Text = "مدارک";
+            this.btn_DegreeShow.UseVisualStyleBackColor = true;
+            this.btn_DegreeShow.Click += new System.EventHandler(this.btn_masterShow_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 485);
-            this.ControlBox = false;
-            this.Controls.Add(this.btn_masterShow);
+            this.Controls.Add(this.btn_DegreeShow);
             this.Name = "Form1";
-            this.Text = "";
             this.Activated += new System.EventHandler(this.Form1_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Controls.SetChildIndex(this.btn_masterShow, 0);
+            this.Controls.SetChildIndex(this.btn_DegreeShow, 0);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btn_masterShow;
+        private System.Windows.Forms.Button btn_DegreeShow;
     }
 }
 

@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Landemy.App_Source.SqlConnection
+public class Degree
 {
-    class SqlCon
-    {
-    }
+    public int ID { get; set; }
+    public string Title { get; set; }
 }

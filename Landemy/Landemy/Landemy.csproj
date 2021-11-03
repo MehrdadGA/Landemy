@@ -46,11 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Source\BusinessLayer\DegreeBusiness.cs" />
+    <Compile Include="App_Source\DataLayer\DegreeData.cs" />
+    <Compile Include="App_Source\DataObject\Degree.cs" />
+    <Compile Include="App_Source\SQLCon\SqlCon.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DegreeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DegreeForm.Designer.cs">
+      <DependentUpon>DegreeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MasterForm\frmMaster.cs">
       <SubType>Form</SubType>
@@ -62,6 +72,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DegreeForm.resx">
+      <DependentUpon>DegreeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MasterForm\frmMaster.resx">
       <DependentUpon>frmMaster.cs</DependentUpon>
@@ -94,6 +107,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Main2.jpeg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\InsertIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update2Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete2Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

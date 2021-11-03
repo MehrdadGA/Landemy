@@ -9,3 +9,4 @@ D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.csproj.CoreCompile
 D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.exe
 D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.pdb
 D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Form1.resources
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.DegreeForm.resources
