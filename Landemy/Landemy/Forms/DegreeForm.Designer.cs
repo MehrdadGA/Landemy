@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_DegreeDelete = new System.Windows.Forms.Button();
             this.btn_DegreePrint = new System.Windows.Forms.Button();
@@ -60,9 +60,9 @@
             this.panel1.Controls.Add(this.txt_DegreeTitle);
             this.panel1.Controls.Add(this.txt_DegreeId);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(741, 54);
+            this.panel1.Location = new System.Drawing.Point(726, 54);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 479);
+            this.panel1.Size = new System.Drawing.Size(215, 479);
             this.panel1.TabIndex = 2;
             // 
             // btn_DegreeDelete
@@ -70,20 +70,21 @@
             this.btn_DegreeDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DegreeDelete.Image = global::Landemy.Properties.Resources.Delete2Icon;
             this.btn_DegreeDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_DegreeDelete.Location = new System.Drawing.Point(97, 315);
+            this.btn_DegreeDelete.Location = new System.Drawing.Point(111, 318);
             this.btn_DegreeDelete.Name = "btn_DegreeDelete";
             this.btn_DegreeDelete.Size = new System.Drawing.Size(87, 40);
             this.btn_DegreeDelete.TabIndex = 5;
             this.btn_DegreeDelete.Text = "حذف";
             this.btn_DegreeDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_DegreeDelete.UseVisualStyleBackColor = true;
+            this.btn_DegreeDelete.Click += new System.EventHandler(this.btn_DegreeDelete_Click);
             // 
             // btn_DegreePrint
             // 
             this.btn_DegreePrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DegreePrint.Image = global::Landemy.Properties.Resources.PrintIcon;
             this.btn_DegreePrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_DegreePrint.Location = new System.Drawing.Point(6, 315);
+            this.btn_DegreePrint.Location = new System.Drawing.Point(20, 318);
             this.btn_DegreePrint.Name = "btn_DegreePrint";
             this.btn_DegreePrint.Size = new System.Drawing.Size(87, 40);
             this.btn_DegreePrint.TabIndex = 4;
@@ -96,7 +97,7 @@
             this.btn_DegreeInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DegreeInsert.Image = global::Landemy.Properties.Resources.InsertIcon;
             this.btn_DegreeInsert.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_DegreeInsert.Location = new System.Drawing.Point(97, 269);
+            this.btn_DegreeInsert.Location = new System.Drawing.Point(111, 272);
             this.btn_DegreeInsert.Name = "btn_DegreeInsert";
             this.btn_DegreeInsert.Size = new System.Drawing.Size(87, 40);
             this.btn_DegreeInsert.TabIndex = 3;
@@ -110,7 +111,7 @@
             this.btn_DegreeEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DegreeEdit.Image = global::Landemy.Properties.Resources.Update2Icon;
             this.btn_DegreeEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_DegreeEdit.Location = new System.Drawing.Point(6, 269);
+            this.btn_DegreeEdit.Location = new System.Drawing.Point(20, 272);
             this.btn_DegreeEdit.Name = "btn_DegreeEdit";
             this.btn_DegreeEdit.Size = new System.Drawing.Size(87, 40);
             this.btn_DegreeEdit.TabIndex = 2;
@@ -122,7 +123,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(146, 31);
+            this.label2.Location = new System.Drawing.Point(160, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 14);
             this.label2.TabIndex = 1;
@@ -131,7 +132,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(146, 59);
+            this.label1.Location = new System.Drawing.Point(160, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 14);
             this.label1.TabIndex = 1;
@@ -139,14 +140,14 @@
             // 
             // txt_DegreeTitle
             // 
-            this.txt_DegreeTitle.Location = new System.Drawing.Point(6, 56);
+            this.txt_DegreeTitle.Location = new System.Drawing.Point(20, 56);
             this.txt_DegreeTitle.Name = "txt_DegreeTitle";
             this.txt_DegreeTitle.Size = new System.Drawing.Size(134, 22);
             this.txt_DegreeTitle.TabIndex = 0;
             // 
             // txt_DegreeId
             // 
-            this.txt_DegreeId.Location = new System.Drawing.Point(6, 28);
+            this.txt_DegreeId.Location = new System.Drawing.Point(20, 28);
             this.txt_DegreeId.Name = "txt_DegreeId";
             this.txt_DegreeId.Size = new System.Drawing.Size(134, 22);
             this.txt_DegreeId.TabIndex = 0;
@@ -157,13 +158,13 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 54);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(741, 479);
+            this.panel2.Size = new System.Drawing.Size(726, 479);
             this.panel2.TabIndex = 3;
             // 
             // dgv_DegreeForm
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
-            this.dgv_DegreeForm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            this.dgv_DegreeForm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_DegreeForm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DegreeForm.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_DegreeForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -172,7 +173,7 @@
             this.dgv_DegreeForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_DegreeForm.Location = new System.Drawing.Point(0, 0);
             this.dgv_DegreeForm.Name = "dgv_DegreeForm";
-            this.dgv_DegreeForm.Size = new System.Drawing.Size(741, 479);
+            this.dgv_DegreeForm.Size = new System.Drawing.Size(726, 479);
             this.dgv_DegreeForm.TabIndex = 0;
             this.dgv_DegreeForm.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DegreeForm_CellClick);
             this.dgv_DegreeForm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -186,6 +187,7 @@
             // erp_DegreeForm
             // 
             this.erp_DegreeForm.ContainerControl = this;
+            this.erp_DegreeForm.RightToLeft = true;
             // 
             // DegreeForm
             // 

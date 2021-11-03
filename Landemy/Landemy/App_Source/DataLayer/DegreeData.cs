@@ -47,9 +47,21 @@ public class DegreeData
         sqlCommand.Parameters.Add("@Result", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
         sqlCommand.Connection = sqlCon.Open();
         sqlCommand.ExecuteNonQuery();
-        int Result = int.Parse(sqlCommand.Parameters["Result"].Value.ToString());
+        int Result = int.Parse(sqlCommand.Parameters["@Result"].Value.ToString());
         sqlCon.Close();
         return Result;
+    }
+
+    public void DeleteDegreeData(int Id)
+    {
+        SqlCon sqlCon = new SqlCon();
+        SqlCommand sqlCommand = new SqlCommand();
+        sqlCommand.CommandType = CommandType.StoredProcedure;
+        sqlCommand.CommandText = "sp_DeleteDegree";
+        sqlCommand.Parameters.AddWithValue("@ID", Id);
+        sqlCommand.Connection = sqlCon.Open();
+        sqlCommand.ExecuteNonQuery();
+        sqlCon.Close();
     }
 }
 

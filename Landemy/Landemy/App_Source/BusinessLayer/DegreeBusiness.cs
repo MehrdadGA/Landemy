@@ -27,4 +27,10 @@ public class DegreeBusiness
         DegreeData degreeData = new DegreeData();
         return degreeData.UpdateDegreeData(degree.ID, degree.Title);
     }
+
+    public void Delete(Degree degree)
+    {
+        DegreeData degreeData = new DegreeData();
+        degreeData.DeleteDegreeData(degree.ID);
+    }
 }

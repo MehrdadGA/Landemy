@@ -117,5 +117,24 @@ namespace Landemy.Forms
                 }
             }
         }
+
+        private void btn_DegreeDelete_Click(object sender, EventArgs e)
+        {
+            if (txt_DegreeId.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("بر روی سطر مورد نظر کلیک کنید");
+                return;
+            }
+            if (MessageBox.Show("آیا میخواهی این رکورد حذف شود", "هشدار", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                Degree degree = new Degree();
+                degree.ID = int.Parse(txt_DegreeId.Text);
+                DegreeBusiness degreeBusiness = new DegreeBusiness();
+                degreeBusiness.Delete(degree);
+                GetDegreeList();
+                ClearDegreeText();
+                MessageBox.Show("رکورد مورد نظر حذف شد");
+            }
+        }
     }
 }
