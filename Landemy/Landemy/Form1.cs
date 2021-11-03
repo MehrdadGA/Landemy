@@ -10,11 +10,28 @@ using System.Windows.Forms;
 
 namespace Landemy
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Forms.MasterForm.frmMaster
     {
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_masterShow_Click(object sender, EventArgs e)
+        {
+            Forms.MasterForm.frmMaster f = new Forms.MasterForm.frmMaster();
+            f.StrFormName = "نام فرم";
+            f.ShowDialog();
         }
     }
 }

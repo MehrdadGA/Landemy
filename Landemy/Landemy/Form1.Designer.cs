@@ -28,13 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btn_masterShow = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btn_masterShow
+            // 
+            this.btn_masterShow.Location = new System.Drawing.Point(12, 189);
+            this.btn_masterShow.Name = "btn_masterShow";
+            this.btn_masterShow.Size = new System.Drawing.Size(75, 23);
+            this.btn_masterShow.TabIndex = 1;
+            this.btn_masterShow.Text = "button1";
+            this.btn_masterShow.UseVisualStyleBackColor = true;
+            this.btn_masterShow.Click += new System.EventHandler(this.btn_masterShow_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(933, 485);
+            this.ControlBox = false;
+            this.Controls.Add(this.btn_masterShow);
+            this.Name = "Form1";
+            this.Text = "";
+            this.Activated += new System.EventHandler(this.Form1_Activated);
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Controls.SetChildIndex(this.btn_masterShow, 0);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btn_masterShow;
     }
 }
 

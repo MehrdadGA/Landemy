@@ -1,0 +1,11 @@
+D:\Projects\Landemy\Landemy\Landemy\Landemy\bin\Debug\Landemy.exe.config
+D:\Projects\Landemy\Landemy\Landemy\Landemy\bin\Debug\Landemy.exe
+D:\Projects\Landemy\Landemy\Landemy\Landemy\bin\Debug\Landemy.pdb
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.csprojAssemblyReference.cache
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.MasterForm.frmMaster.resources
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Properties.Resources.resources
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.csproj.GenerateResource.cache
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.csproj.CoreCompileInputs.cache
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.exe
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.pdb
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Form1.resources
