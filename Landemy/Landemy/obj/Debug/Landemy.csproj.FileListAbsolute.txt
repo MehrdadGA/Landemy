@@ -1,7 +1,6 @@
 D:\Projects\Landemy\Landemy\Landemy\Landemy\bin\Debug\Landemy.exe.config
 D:\Projects\Landemy\Landemy\Landemy\Landemy\bin\Debug\Landemy.exe
 D:\Projects\Landemy\Landemy\Landemy\Landemy\bin\Debug\Landemy.pdb
-D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.csprojAssemblyReference.cache
 D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.MasterForm.frmMaster.resources
 D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Properties.Resources.resources
 D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.csproj.GenerateResource.cache
@@ -9,4 +8,12 @@ D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.csproj.CoreCompile
 D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.exe
 D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.pdb
 D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Form1.resources
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.Frmmsg.resources
 D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.DegreeForm.resources
+D:\Projects\Landemy\Landemy\Landemy\Landemy\bin\Debug\BaseControl.exe
+D:\Projects\Landemy\Landemy\Landemy\Landemy\bin\Debug\BaseControl.pdb
+D:\Projects\Landemy\Landemy\Landemy\Landemy\bin\Debug\BaseControl.exe.config
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.csprojAssemblyReference.cache
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.csproj.CopyComplete
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.StudentForm.resources
+D:\Projects\Landemy\Landemy\Landemy\Landemy\bin\Debug\PersianDate.dll

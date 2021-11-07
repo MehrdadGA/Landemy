@@ -1,0 +1,11 @@
+D:\Projects\Landemy\Landemy\BaseControl\BaseControl\bin\Debug\BaseControl.exe.config
+D:\Projects\Landemy\Landemy\BaseControl\BaseControl\bin\Debug\BaseControl.exe
+D:\Projects\Landemy\Landemy\BaseControl\BaseControl\bin\Debug\BaseControl.pdb
+D:\Projects\Landemy\Landemy\BaseControl\BaseControl\obj\Debug\BaseControl.BaseTextBox.resources
+D:\Projects\Landemy\Landemy\BaseControl\BaseControl\obj\Debug\BaseControl.Properties.Resources.resources
+D:\Projects\Landemy\Landemy\BaseControl\BaseControl\obj\Debug\BaseControl.csproj.GenerateResource.cache
+D:\Projects\Landemy\Landemy\BaseControl\BaseControl\obj\Debug\BaseControl.csproj.CoreCompileInputs.cache
+D:\Projects\Landemy\Landemy\BaseControl\BaseControl\obj\Debug\BaseControl.exe
+D:\Projects\Landemy\Landemy\BaseControl\BaseControl\obj\Debug\BaseControl.pdb
+D:\Projects\Landemy\Landemy\BaseControl\BaseControl\obj\Debug\BaseControl.Form1.resources
+D:\Projects\Landemy\Landemy\BaseControl\BaseControl\obj\Debug\BaseControl.BaseComboBox.resources

@@ -33,5 +33,12 @@ namespace Landemy
             degreeForm.StrFormName = "فرم مدارک";
             degreeForm.ShowDialog();
         }
+
+        private void btn_StudentForm_Click(object sender, EventArgs e)
+        {
+            Forms.StudentForm studentForm = new Forms.StudentForm();
+            studentForm.StrFormName = "فرم دانش آموز";
+            studentForm.ShowDialog();
+        }
     }
 }

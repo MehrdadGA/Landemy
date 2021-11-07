@@ -12,18 +12,18 @@ namespace Landemy.Forms
 {
     public partial class DegreeForm : Forms.MasterForm.frmMaster
     {
+        Forms.Frmmsg frmmsg = new Frmmsg();
+        App_Source.Shared.MsgBox MsgBox = new App_Source.Shared.MsgBox();
         private void GetDegreeList()
         {
             DegreeBusiness degreeBusiness = new DegreeBusiness();
-            dgv_DegreeForm.DataSource = degreeBusiness.GetDegreeList();
+            dgv_Degree.DataSource = degreeBusiness.GetDegreeList();
         }
-
-        private void SetSetting()
+        private void SetDegreeSetting()
         {
-            dgv_DegreeForm.Columns["Title"].HeaderText = "عنوان مدرک";
-            dgv_DegreeForm.Columns["ID"].Visible = false;
+            dgv_Degree.Columns["Title"].HeaderText = "عنوان مدرک";
+            dgv_Degree.Columns["ID"].Visible = false;
         }
-
         public DegreeForm()
         {
             InitializeComponent();
@@ -32,28 +32,11 @@ namespace Landemy.Forms
         private void DegreeForm_Load(object sender, EventArgs e)
         {
             GetDegreeList();
-            SetSetting();
+            SetDegreeSetting();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void ClearDegreeText()
         {
-
-        }
-
-        private void dgv_DegreeForm_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            dgv_DegreeForm.Rows[e.RowIndex].Cells["ColumnRowNumber"].Value = e.RowIndex + 1;
-        }
-
-        public bool validateData()
-        {
-            bool Result = true;
-            if (txt_DegreeTitle.Text.Trim() == string.Empty)
-            {
-                erp_DegreeForm.SetError(txt_DegreeTitle, "لطفا مقدار را وارد نمایید");
-                Result = false;
-            }
-            return Result;
+            txt_Degreetitle.Text = string.Empty;
         }
 
         private void btn_DegreeInsert_Click(object sender, EventArgs e)
@@ -61,79 +44,88 @@ namespace Landemy.Forms
             if (validateData())
             {
                 Degree degree = new Degree();
-                degree.Title = txt_DegreeTitle.Text.Trim(); 
+                degree.Title = txt_Degreetitle.Text.Trim();
                 DegreeBusiness degreeBusiness = new DegreeBusiness();
 
                 if (degreeBusiness.InsertDegree(degree) != 0)
-                { 
-                    MessageBox.Show("مدرک جدید درست ثبت شد");
+                {
+                    MsgBox.Show("مدرک جدید درست ثبت شد", "اتمام", 1);
                     GetDegreeList();
                     ClearDegreeText();
                 }
                 else
                 {
-                    MessageBox.Show("مدرک جدید درست ثبت نشد");
+                    MsgBox.Show("مدرک جدید درست ثبت نشد", "", 1);
                 }
             }
         }
 
-        private void ClearDegreeText()
+        private void dgv_Degree_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            txt_DegreeId.Text = string.Empty;
-            txt_DegreeTitle.Text = string.Empty;
+            dgv_Degree.Rows[e.RowIndex].Cells["ColumnRowNumber"].Value = e.RowIndex + 1;
         }
-
-        private void dgv_DegreeForm_CellClick(object sender, DataGridViewCellEventArgs e)
+        public bool validateData()
         {
-            if (dgv_DegreeForm.Rows.Count > 1)
+            bool Result = true;
+            if (txt_Degreetitle.Text.Trim() == string.Empty)
             {
-                txt_DegreeId.Text = dgv_DegreeForm.CurrentRow.Cells["ID"].Value.ToString();
-                txt_DegreeTitle.Text = dgv_DegreeForm.CurrentRow.Cells["Title"].Value.ToString();
+                erp_Degree.SetError(txt_Degreetitle, "لطفا مقدار را وارد نمایید");
+                Result = false;
             }
+            return Result;
         }
 
         private void btn_DegreeEdit_Click(object sender, EventArgs e)
         {
             if (validateData())
             {
-                if (txt_DegreeId.Text.Trim() == string.Empty)
+                if (textBox1.Text.Trim() == string.Empty)
                 {
-                    MessageBox.Show("لطفا بر روی سطر مورد نظر کلیک کنید");
+                    MsgBox.Show("لطفا بر روی سطر مورد نظر کلیک کنید", "", 1);
                     return;
                 }
                 Degree degree = new Degree();
-                degree.ID = int.Parse(txt_DegreeId.Text);
-                degree.Title = txt_DegreeTitle.Text.Trim();
+                degree.ID = int.Parse(textBox1.Text);
+                degree.Title = txt_Degreetitle.Text.Trim();
                 DegreeBusiness degreeBusiness = new DegreeBusiness();
                 if (degreeBusiness.UpdateDegree(degree) != 0)
                 {
-                    MessageBox.Show("مدرک جدید درست ویرایش شد");
+                    MsgBox.Show("مدرک جدید درست ویرایش شد", "", 1);
                     GetDegreeList();
                     ClearDegreeText();
                 }
                 else
                 {
-                    MessageBox.Show("مدرک جدید درست ویرایش نشد");
+                    MsgBox.Show("مدرک جدید درست ویرایش نشد");
                 }
             }
         }
 
         private void btn_DegreeDelete_Click(object sender, EventArgs e)
         {
-            if (txt_DegreeId.Text.Trim() == string.Empty)
+            if (textBox1.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("بر روی سطر مورد نظر کلیک کنید");
+                MsgBox.Show("بر روی سطر مورد نظر کلیک کنید", "", 1);
                 return;
             }
-            if (MessageBox.Show("آیا میخواهی این رکورد حذف شود", "هشدار", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MsgBox.Show("آیا میخواهی این رکورد حذف شود", "هشدار", 2) == DialogResult.OK)
             {
                 Degree degree = new Degree();
-                degree.ID = int.Parse(txt_DegreeId.Text);
+                degree.ID = int.Parse(textBox1.Text);
                 DegreeBusiness degreeBusiness = new DegreeBusiness();
                 degreeBusiness.Delete(degree);
                 GetDegreeList();
                 ClearDegreeText();
-                MessageBox.Show("رکورد مورد نظر حذف شد");
+                MsgBox.Show("رکورد مورد نظر حذف شد", "", 1);
+            }
+        }
+
+        private void dgv_Degree_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgv_Degree.Rows.Count > 1)
+            {
+                textBox1.Text = dgv_Degree.CurrentRow.Cells["ID"].Value.ToString();
+                txt_Degreetitle.Text = dgv_Degree.CurrentRow.Cells["Title"].Value.ToString();
             }
         }
     }
