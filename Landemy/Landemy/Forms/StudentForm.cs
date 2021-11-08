@@ -35,7 +35,6 @@ namespace Landemy.Forms
         {
             dgv_Student.DataSource = new StudentBusiness().GetList();
             com_StudentDegreeID_FK.DataSource = new DegreeBusiness().GetDegreeList();
-            
         }
 
         public void SetSetting()

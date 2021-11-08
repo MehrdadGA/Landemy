@@ -30,6 +30,7 @@
         {
             this.btn_DegreeShow = new System.Windows.Forms.Button();
             this.btn_StudentForm = new System.Windows.Forms.Button();
+            this.btn_Teacher = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_DegreeShow
@@ -52,11 +53,22 @@
             this.btn_StudentForm.UseVisualStyleBackColor = true;
             this.btn_StudentForm.Click += new System.EventHandler(this.btn_StudentForm_Click);
             // 
+            // btn_Teacher
+            // 
+            this.btn_Teacher.Location = new System.Drawing.Point(174, 35);
+            this.btn_Teacher.Name = "btn_Teacher";
+            this.btn_Teacher.Size = new System.Drawing.Size(75, 57);
+            this.btn_Teacher.TabIndex = 3;
+            this.btn_Teacher.Text = "استاد";
+            this.btn_Teacher.UseVisualStyleBackColor = true;
+            this.btn_Teacher.Click += new System.EventHandler(this.btn_Teacher_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 485);
+            this.Controls.Add(this.btn_Teacher);
             this.Controls.Add(this.btn_StudentForm);
             this.Controls.Add(this.btn_DegreeShow);
             this.Name = "Form1";
@@ -64,6 +76,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Controls.SetChildIndex(this.btn_DegreeShow, 0);
             this.Controls.SetChildIndex(this.btn_StudentForm, 0);
+            this.Controls.SetChildIndex(this.btn_Teacher, 0);
             this.ResumeLayout(false);
 
         }
@@ -72,6 +85,7 @@
 
         private System.Windows.Forms.Button btn_DegreeShow;
         private System.Windows.Forms.Button btn_StudentForm;
+        private System.Windows.Forms.Button btn_Teacher;
     }
 }
 

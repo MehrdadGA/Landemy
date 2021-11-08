@@ -40,5 +40,12 @@ namespace Landemy
             studentForm.StrFormName = "فرم دانش آموز";
             studentForm.ShowDialog();
         }
+
+        private void btn_Teacher_Click(object sender, EventArgs e)
+        {
+            Forms.TeacherForm teacherForm = new Forms.TeacherForm();
+            teacherForm.StrFormName = "فرم اساتید";
+            teacherForm.ShowDialog();
+        }
     }
 }
