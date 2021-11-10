@@ -68,6 +68,7 @@
             this.ColumnRowNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datePicker1 = new PersianDate.DatePicker();
             this.erp_Student = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btn_SearchMoreStudent = new System.Windows.Forms.Button();
             this.grp_SearchStudent.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -78,6 +79,7 @@
             // 
             // grp_SearchStudent
             // 
+            this.grp_SearchStudent.Controls.Add(this.btn_SearchMoreStudent);
             this.grp_SearchStudent.Controls.Add(this.btn_stdFamilySearch);
             this.grp_SearchStudent.Controls.Add(this.btn_StdSearchName);
             this.grp_SearchStudent.Controls.Add(this.btn_StdNationalcodeSearch);
@@ -228,7 +230,7 @@
             // 
             // datePicker
             // 
-            this.datePicker.Date = "1400/08/16";
+            this.datePicker.Date = "1400/08/18";
             this.datePicker.FocusColor = System.Drawing.Color.Yellow;
             this.datePicker.Font = new System.Drawing.Font("Tahoma", 8F);
             this.datePicker.Location = new System.Drawing.Point(146, 173);
@@ -468,6 +470,16 @@
             // 
             this.erp_Student.ContainerControl = this;
             // 
+            // btn_SearchMoreStudent
+            // 
+            this.btn_SearchMoreStudent.Location = new System.Drawing.Point(12, 25);
+            this.btn_SearchMoreStudent.Name = "btn_SearchMoreStudent";
+            this.btn_SearchMoreStudent.Size = new System.Drawing.Size(102, 23);
+            this.btn_SearchMoreStudent.TabIndex = 27;
+            this.btn_SearchMoreStudent.Text = "جستجوی بیشتر";
+            this.btn_SearchMoreStudent.UseVisualStyleBackColor = true;
+            this.btn_SearchMoreStudent.Click += new System.EventHandler(this.btn_SearchMoreStudent_Click);
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -535,5 +547,6 @@
         private System.Windows.Forms.TextBox txt_FamilySearch;
         private System.Windows.Forms.Button btn_stdFamilySearch;
         private System.Windows.Forms.Button btn_StdSearchName;
+        private System.Windows.Forms.Button btn_SearchMoreStudent;
     }
 }

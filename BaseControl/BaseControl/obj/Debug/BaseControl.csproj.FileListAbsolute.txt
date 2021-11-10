@@ -9,3 +9,4 @@ D:\Projects\Landemy\Landemy\BaseControl\BaseControl\obj\Debug\BaseControl.exe
 D:\Projects\Landemy\Landemy\BaseControl\BaseControl\obj\Debug\BaseControl.pdb
 D:\Projects\Landemy\Landemy\BaseControl\BaseControl\obj\Debug\BaseControl.Form1.resources
 D:\Projects\Landemy\Landemy\BaseControl\BaseControl\obj\Debug\BaseControl.BaseComboBox.resources
+D:\Projects\Landemy\Landemy\BaseControl\BaseControl\obj\Debug\BaseControl.csprojAssemblyReference.cache

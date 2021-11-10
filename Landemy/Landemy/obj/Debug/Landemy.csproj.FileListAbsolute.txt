@@ -17,3 +17,5 @@ D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.csprojAssemblyRefe
 D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.csproj.CopyComplete
 D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.StudentForm.resources
 D:\Projects\Landemy\Landemy\Landemy\Landemy\bin\Debug\PersianDate.dll
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.TeacherForm.resources
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.SearchStudentForm.resources

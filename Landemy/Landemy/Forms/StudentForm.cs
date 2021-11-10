@@ -18,6 +18,8 @@ namespace Landemy.Forms
             InitializeComponent();
         }
 
+        bool ChangePicture = false;
+
         private void ClearText()
         {
             txt_StudentNationalCode.Text = string.Empty;
@@ -34,7 +36,7 @@ namespace Landemy.Forms
         public void GetList()
         {
             dgv_Student.DataSource = new StudentBusiness().GetList();
-            com_StudentDegreeID_FK.DataSource = new DegreeBusiness().GetDegreeList();
+            
         }
 
         public void SetSetting()
@@ -50,21 +52,33 @@ namespace Landemy.Forms
             dgv_Student.Columns["DateOfBirth"].HeaderText = "تاریخ تولد";
             dgv_Student.Columns["Address"].HeaderText = "آدرس";
             dgv_Student.Columns["Phone"].HeaderText = "شماره تلفن";
+
+            if (dgv_Student.Rows.Count == 1)
+            {
+                msgBox.Show("برای مقدار وارد شده رکوردی پیدا نشد", "هشدار");
+            }
+        }
+
+        private void SetOnlyOne()
+        {
+            com_StudentDegreeID_FK.DataSource = new DegreeBusiness().GetDegreeList();
+
+            com_StudentSex.Text = "انتخاب کنید";
+            com_StudentSex.Items.Add("مونث");
+            com_StudentSex.Items.Add("مذکر");
+
             //------------------------------------------------------------------------
             com_StudentDegreeID_FK.DisplayMember = "Title";
             com_StudentDegreeID_FK.ValueMember = "ID";
             com_StudentDegreeID_FK.AutoCompleteMode = AutoCompleteMode.Suggest;
             com_StudentDegreeID_FK.AutoCompleteSource = AutoCompleteSource.ListItems;
-            //--------------------------------------------------------------------------
-            com_StudentSex.Text = "انتخاب کنید";
-            com_StudentSex.Items.Add("مونث");
-            com_StudentSex.Items.Add("مذکر");
-
         }
+
         private void StudentForm_Load(object sender, EventArgs e)
         {
             GetList();
             SetSetting();
+            SetOnlyOne();
         }
 
         private void dgv_Student_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -167,8 +181,11 @@ namespace Landemy.Forms
                 studentBusiness.Update(student);
                 if (student.ID > 0)
                 {
-                    if (pictureBox1.Tag.ToString().Trim() != string.Empty)
-                        MyFile.CopyFile(pictureBox1.Tag.ToString(), "StudentImage/" + student.ID.ToString() + ".jpg");
+                    if (ChangePicture)
+                    {
+                        if (pictureBox1.Tag.ToString().Trim() != string.Empty)
+                            MyFile.CopyFile(pictureBox1.Tag.ToString(), "StudentImage/" + student.ID.ToString() + ".jpg");
+                    }
                 }
                 GetList();
                 msgBox.Show("ویرایش دانش آموز انجام شد", "ویرایش دانش آموز", 1);
@@ -206,7 +223,7 @@ namespace Landemy.Forms
             StudentBusiness studentBusiness = new StudentBusiness();
             if (txt_StudentNationalCode.Tag.ToString() == string.Empty)
             {
-                msgBox.Show("بر روی رکورد مورد نظر جهت ویرایش کلیک کنید.");
+                msgBox.Show("بر روی رکورد مورد نظر جهت حذف کلیک کنید.");
                 return;
             }
             if (msgBox.Show("آیا میخواهید رکورد حذف گردد؟", "هشدار", 2) == DialogResult.OK)
@@ -237,6 +254,7 @@ namespace Landemy.Forms
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
+                    ChangePicture = true;
                 }
                 pictureBox1.Tag = openFileDialog.FileName;
             }
@@ -250,7 +268,7 @@ namespace Landemy.Forms
 
         private void btn_StudentPicSave_Click(object sender, EventArgs e)
         {
-            if (pictureBox1.Tag != null)
+            if (pictureBox1.Image != null)
             {
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
                 saveFileDialog.Filter = "Image|*.jpg";
@@ -264,23 +282,68 @@ namespace Landemy.Forms
 
         private void btn_StdSearchName_Click(object sender, EventArgs e)
         {
-            StudentBusiness studentBusiness = new StudentBusiness();
-            dgv_Student.DataSource = studentBusiness.DetailsByField("Name", txt_NameSearch.Text);
-            SetSetting();
+            if (txt_NameSearch.Text.Trim().Length >= 2)
+            {
+                StudentBusiness studentBusiness = new StudentBusiness();
+                dgv_Student.DataSource = studentBusiness.DetailsByField("Name", txt_NameSearch.Text);
+                SetSetting();
+            }
+            else
+                msgBox.Show("لطفا بیش از 2 کارکتر وارد نمایید");
         }
 
         private void btn_StdNationalcodeSearch_Click(object sender, EventArgs e)
         {
-            StudentBusiness studentBusiness = new StudentBusiness();
-            dgv_Student.DataSource = studentBusiness.DetailsByField("NationalCode", txt_NationalSearch.Text);
-            SetSetting();
+            if (txt_NationalSearch.Text.Trim().Length >= 2)
+            {
+                StudentBusiness studentBusiness = new StudentBusiness();
+                dgv_Student.DataSource = studentBusiness.DetailsByField("NationalCode", txt_NationalSearch.Text);
+                SetSetting();
+            }
+            else
+                msgBox.Show("لطفا بیش از 2 کارکتر وارد نمایید");
         }
 
         private void btn_stdFamilySearch_Click(object sender, EventArgs e)
         {
-            StudentBusiness studentBusiness = new StudentBusiness();
-            dgv_Student.DataSource = studentBusiness.DetailsByField("LastName", txt_FamilySearch.Text);
-            SetSetting();
+            if (txt_FamilySearch.Text.Trim().Length >= 2)
+            {
+                StudentBusiness studentBusiness = new StudentBusiness();
+                dgv_Student.DataSource = studentBusiness.DetailsByField("LastName", txt_FamilySearch.Text);
+                SetSetting();
+            }
+            else
+                msgBox.Show("لطفا بیش از 2 کارکتر وارد نمایید");
+        }
+
+        private void btn_SearchMoreStudent_Click(object sender, EventArgs e)
+        {
+            Forms.SearchStudentForm searchStudentForm = new Forms.SearchStudentForm();
+            searchStudentForm.StrFormName = "جستجوی دانش آموز";
+            searchStudentForm.ShowDialog();
+            //----------------------------------------------------------------------------------
+            if (searchStudentForm.sendParameter > 0)
+            {
+                if (searchStudentForm.dgv_SearchStudent.Rows.Count > 1)
+                {
+                    txt_StudentNationalCode.Text = searchStudentForm.dgv_SearchStudent.CurrentRow.Cells["NationalCode"].Value.ToString();
+                    txt_StudentNationalCode.Tag = searchStudentForm.dgv_SearchStudent.CurrentRow.Cells["ID"].Value.ToString();
+                    txtStudentFirstName.Text = searchStudentForm.dgv_SearchStudent.CurrentRow.Cells["Name"].Value.ToString();
+                    txt_StudentLastName.Text = searchStudentForm.dgv_SearchStudent.CurrentRow.Cells["LastName"].Value.ToString();
+                    com_StudentDegreeID_FK.Text = searchStudentForm.dgv_SearchStudent.CurrentRow.Cells["DegreeID"].Value.ToString();
+                    com_StudentSex.Text = searchStudentForm.dgv_SearchStudent.CurrentRow.Cells["Sex"].Value.ToString();
+                    datePicker.Text = searchStudentForm.dgv_SearchStudent.CurrentRow.Cells["DateOfBirth"].Value.ToString();
+                    txt_StudentAddress.Text = searchStudentForm.dgv_SearchStudent.CurrentRow.Cells["Address"].Value.ToString();
+                    baseTextBox2.Text = searchStudentForm.dgv_SearchStudent.CurrentRow.Cells["Phone"].Value.ToString();
+                    if (System.IO.File.Exists("StudentImage/" + txt_StudentNationalCode.Tag.ToString() + ".jpg"))
+                    {
+                        pictureBox1.Image = Image.FromFile("StudentImage/" + txt_StudentNationalCode.Tag.ToString() + ".jpg");
+                        pictureBox1.Tag = "StudentImage/" + txt_StudentNationalCode.Tag.ToString() + ".jpg";
+                    }
+                    else
+                        pictureBox1.Image = null;
+                }
+            }
         }
     }
 }
