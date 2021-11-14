@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Landemy", "Landemy\Landemy.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseControl", "..\BaseControl\BaseControl\BaseControl.csproj", "{3EABA6E4-017A-4B8F-9333-89FFE9A84632}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winprint", "..\winprint\winprint\winprint\winprint.csproj", "{E2EE3108-5E82-4656-B0DC-2C4843B64DFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3EABA6E4-017A-4B8F-9333-89FFE9A84632}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EABA6E4-017A-4B8F-9333-89FFE9A84632}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EABA6E4-017A-4B8F-9333-89FFE9A84632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2EE3108-5E82-4656-B0DC-2C4843B64DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2EE3108-5E82-4656-B0DC-2C4843B64DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2EE3108-5E82-4656-B0DC-2C4843B64DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2EE3108-5E82-4656-B0DC-2C4843B64DFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

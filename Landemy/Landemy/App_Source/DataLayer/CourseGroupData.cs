@@ -4,7 +4,7 @@ using System.Data.SqlClient;
      public class CourseGroupData
      {
 
-	 public int DataInsertCourseGroup(int ID ,byte Year ,byte Term ,byte LevelCourse ,string Tuition ,string WeekPlan ,byte ClassNumber ,int FK_TeacherID ,int FK_CourseID )
+	 public int DataInsertCourseGroup(int ID ,int Year ,byte Term ,byte LevelCourse ,string Tuition ,string WeekPlan ,byte ClassNumber ,int FK_TeacherID ,int FK_CourseID )
 	{
 		try{
 		SqlCon Scon = new SqlCon();
@@ -52,7 +52,7 @@ using System.Data.SqlClient;
 		}
 	}
 
-	 public int DataUpdateCourseGroup(int ID ,byte Year ,byte Term ,byte LevelCourse ,string Tuition ,string WeekPlan ,byte ClassNumber ,int FK_TeacherID ,int FK_CourseID )
+	 public int DataUpdateCourseGroup(int ID ,int Year ,byte Term ,byte LevelCourse ,string Tuition ,string WeekPlan ,byte ClassNumber ,int FK_TeacherID ,int FK_CourseID )
 	{
 		try{
 		SqlCon Scon = new SqlCon();

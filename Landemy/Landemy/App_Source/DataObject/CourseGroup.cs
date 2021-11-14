@@ -3,7 +3,7 @@
      {
 
 	 private   int  _ID ;   
-	 private   byte  _Year ;   
+	 private   int  _Year ;   
 	 private   byte  _Term ;   
 	 private   byte  _LevelCourse ;   
 	 private   string  _Tuition ;   
@@ -20,7 +20,7 @@
 	}
 
  
-	 public  byte   Year {
+	 public  int   Year {
 		 get{  return _Year; }
 		 set{_Year=  value;}
 	}

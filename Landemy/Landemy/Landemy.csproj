@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="PersianDate">
       <HintPath>..\..\..\..\..\Toturial\Rahim Lotfi\8_CsharpProjectZabanSaraPart1\PersianDate.dll</HintPath>
     </Reference>
@@ -94,6 +98,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CourseForm.Designer.cs">
+      <DependentUpon>CourseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CourseGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CourseGroupForm.Designer.cs">
+      <DependentUpon>CourseGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CourseSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CourseSelectForm.Designer.cs">
+      <DependentUpon>CourseSelectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DegreeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,11 +134,35 @@
     <Compile Include="Forms\MasterForm\frmMaster.Designer.cs">
       <DependentUpon>frmMaster.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SearchCourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SearchCourseForm.Designer.cs">
+      <DependentUpon>SearchCourseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SearchCourseGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SearchCourseGroupForm.Designer.cs">
+      <DependentUpon>SearchCourseGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SearchCourseSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SearchCourseSelectForm.Designer.cs">
+      <DependentUpon>SearchCourseSelectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SearchStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\SearchStudentForm.Designer.cs">
       <DependentUpon>SearchStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SearchTeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SearchTeacherForm.Designer.cs">
+      <DependentUpon>SearchTeacherForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\StudentForm.cs">
       <SubType>Form</SubType>
@@ -135,6 +181,15 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CourseForm.resx">
+      <DependentUpon>CourseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CourseGroupForm.resx">
+      <DependentUpon>CourseGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CourseSelectForm.resx">
+      <DependentUpon>CourseSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DegreeForm.resx">
       <DependentUpon>DegreeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,8 +199,20 @@
     <EmbeddedResource Include="Forms\MasterForm\frmMaster.resx">
       <DependentUpon>frmMaster.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SearchCourseForm.resx">
+      <DependentUpon>SearchCourseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SearchCourseGroupForm.resx">
+      <DependentUpon>SearchCourseGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SearchCourseSelectForm.resx">
+      <DependentUpon>SearchCourseSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SearchStudentForm.resx">
       <DependentUpon>SearchStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SearchTeacherForm.resx">
+      <DependentUpon>SearchTeacherForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>
@@ -163,6 +230,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -201,6 +269,10 @@
     <ProjectReference Include="..\..\BaseControl\BaseControl\BaseControl.csproj">
       <Project>{3eaba6e4-017a-4b8f-9333-89ffe9a84632}</Project>
       <Name>BaseControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\winprint\winprint\winprint\winprint.csproj">
+      <Project>{e2ee3108-5e82-4656-b0dc-2c4843b64dfc}</Project>
+      <Name>winprint</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

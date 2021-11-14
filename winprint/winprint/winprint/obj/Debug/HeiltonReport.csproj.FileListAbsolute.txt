@@ -1,0 +1,10 @@
+C:\Users\FTRG\Desktop\LotfiReport\LotfiReport\LotfiReport\2013\winprint2012\winprint\bin\Debug\winprint.exe.config
+C:\Users\FTRG\Desktop\LotfiReport\LotfiReport\LotfiReport\2013\winprint2012\winprint\obj\Debug\winprint.exe
+C:\Users\FTRG\Desktop\LotfiReport\LotfiReport\LotfiReport\2013\winprint2012\winprint\obj\Debug\winprint.pdb
+C:\Users\FTRG\Desktop\LotfiReport\LotfiReport\LotfiReport\2013\winprint2012\winprint\bin\Debug\winprint.exe
+C:\Users\FTRG\Desktop\LotfiReport\LotfiReport\LotfiReport\2013\winprint2012\winprint\bin\Debug\winprint.pdb
+C:\Users\FTRG\Desktop\LotfiReport\LotfiReport\LotfiReport\2013\winprint2012\winprint\obj\Debug\HeiltonReport.csprojResolveAssemblyReference.cache
+C:\Users\FTRG\Desktop\LotfiReport\LotfiReport\LotfiReport\2013\winprint2012\winprint\obj\Debug\winprint.Form1.resources
+C:\Users\FTRG\Desktop\LotfiReport\LotfiReport\LotfiReport\2013\winprint2012\winprint\obj\Debug\winprint.PrintOptions.resources
+C:\Users\FTRG\Desktop\LotfiReport\LotfiReport\LotfiReport\2013\winprint2012\winprint\obj\Debug\winprint.Properties.Resources.resources
+C:\Users\FTRG\Desktop\LotfiReport\LotfiReport\LotfiReport\2013\winprint2012\winprint\obj\Debug\HeiltonReport.csproj.GenerateResource.Cache

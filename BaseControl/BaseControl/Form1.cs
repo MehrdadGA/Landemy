@@ -26,5 +26,35 @@ namespace BaseControl
         {
 
         }
+
+        private void myToolbar1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void myToolbar1_Btn_New()
+        {
+
+        }
+
+        private void myToolbar1_Btn_OK()
+        {
+
+        }
+
+        private void myToolbar1_Btn_Edit()
+        {
+
+        }
+
+        private void myToolbar1_Btn_Delete()
+        {
+
+        }
+
+        private void myToolbar1_Btn_Cancel()
+        {
+
+        }
     }
 }

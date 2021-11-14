@@ -47,5 +47,26 @@ namespace Landemy
             teacherForm.StrFormName = "فرم اساتید";
             teacherForm.ShowDialog();
         }
+
+        private void btn_Course_Click(object sender, EventArgs e)
+        {
+            Forms.CourseForm courseForm = new Forms.CourseForm();
+            courseForm.StrFormName = "فرم درس";
+            courseForm.ShowDialog();
+        }
+
+        private void btn_CourseGroup_Click(object sender, EventArgs e)
+        {
+            Forms.CourseGroupForm courseGroupForm = new Forms.CourseGroupForm();
+            courseGroupForm.StrFormName = "فرم گروه درسی";
+            courseGroupForm.ShowDialog();
+        }
+
+        private void btn_CourseSelect_Click(object sender, EventArgs e)
+        {
+            Forms.CourseSelectForm courseSelectForm = new Forms.CourseSelectForm();
+            courseSelectForm.StrFormName = "فرم انتخاب واحد";
+            courseSelectForm.ShowDialog();
+        }
     }
 }

@@ -19,3 +19,13 @@ D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.StudentForm.
 D:\Projects\Landemy\Landemy\Landemy\Landemy\bin\Debug\PersianDate.dll
 D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.TeacherForm.resources
 D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.SearchStudentForm.resources
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.SearchTeacherForm.resources
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.CourseGroupForm.resources
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.SearchCourseGroupForm.resources
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.CourseForm.resources
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.SearchCourseForm.resources
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.CourseSelectForm.resources
+D:\Projects\Landemy\Landemy\Landemy\Landemy\obj\Debug\Landemy.Forms.SearchCourseSelectForm.resources
+D:\Projects\Landemy\Landemy\Landemy\Landemy\bin\Debug\winprint.exe
+D:\Projects\Landemy\Landemy\Landemy\Landemy\bin\Debug\winprint.pdb
+D:\Projects\Landemy\Landemy\Landemy\Landemy\bin\Debug\winprint.exe.config

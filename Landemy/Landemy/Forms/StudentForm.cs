@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using winprint;
 
 namespace Landemy.Forms
 {
@@ -36,7 +37,6 @@ namespace Landemy.Forms
         public void GetList()
         {
             dgv_Student.DataSource = new StudentBusiness().GetList();
-            
         }
 
         public void SetSetting()
@@ -344,6 +344,16 @@ namespace Landemy.Forms
                         pictureBox1.Image = null;
                 }
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_StudentPrint_Click(object sender, EventArgs e)
+        {
+            winprint.PrintDGV.Print_DataGridView(FarsiGridView.reverse_DataGridView(dgv_Student));
         }
     }
 }

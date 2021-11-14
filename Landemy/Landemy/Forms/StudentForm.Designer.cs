@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.grp_SearchStudent = new System.Windows.Forms.GroupBox();
+            this.btn_SearchMoreStudent = new System.Windows.Forms.Button();
             this.btn_stdFamilySearch = new System.Windows.Forms.Button();
             this.btn_StdSearchName = new System.Windows.Forms.Button();
             this.btn_StdNationalcodeSearch = new System.Windows.Forms.Button();
@@ -68,7 +69,6 @@
             this.ColumnRowNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datePicker1 = new PersianDate.DatePicker();
             this.erp_Student = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btn_SearchMoreStudent = new System.Windows.Forms.Button();
             this.grp_SearchStudent.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -90,19 +90,33 @@
             this.grp_SearchStudent.Controls.Add(this.txt_NameSearch);
             this.grp_SearchStudent.Controls.Add(this.txt_FamilySearch);
             this.grp_SearchStudent.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grp_SearchStudent.Location = new System.Drawing.Point(0, 521);
+            this.grp_SearchStudent.Location = new System.Drawing.Point(0, 670);
+            this.grp_SearchStudent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grp_SearchStudent.Name = "grp_SearchStudent";
-            this.grp_SearchStudent.Size = new System.Drawing.Size(1066, 96);
+            this.grp_SearchStudent.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grp_SearchStudent.Size = new System.Drawing.Size(1218, 123);
             this.grp_SearchStudent.TabIndex = 2;
             this.grp_SearchStudent.TabStop = false;
             this.grp_SearchStudent.Text = "جستجو";
             // 
+            // btn_SearchMoreStudent
+            // 
+            this.btn_SearchMoreStudent.Location = new System.Drawing.Point(14, 32);
+            this.btn_SearchMoreStudent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_SearchMoreStudent.Name = "btn_SearchMoreStudent";
+            this.btn_SearchMoreStudent.Size = new System.Drawing.Size(117, 30);
+            this.btn_SearchMoreStudent.TabIndex = 27;
+            this.btn_SearchMoreStudent.Text = "جستجوی بیشتر";
+            this.btn_SearchMoreStudent.UseVisualStyleBackColor = true;
+            this.btn_SearchMoreStudent.Click += new System.EventHandler(this.btn_SearchMoreStudent_Click);
+            // 
             // btn_stdFamilySearch
             // 
             this.btn_stdFamilySearch.Image = global::Landemy.Properties.Resources.SearchIcon;
-            this.btn_stdFamilySearch.Location = new System.Drawing.Point(249, 20);
+            this.btn_stdFamilySearch.Location = new System.Drawing.Point(285, 26);
+            this.btn_stdFamilySearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_stdFamilySearch.Name = "btn_stdFamilySearch";
-            this.btn_stdFamilySearch.Size = new System.Drawing.Size(38, 33);
+            this.btn_stdFamilySearch.Size = new System.Drawing.Size(43, 42);
             this.btn_stdFamilySearch.TabIndex = 26;
             this.btn_stdFamilySearch.UseVisualStyleBackColor = true;
             this.btn_stdFamilySearch.Click += new System.EventHandler(this.btn_stdFamilySearch_Click);
@@ -110,9 +124,10 @@
             // btn_StdSearchName
             // 
             this.btn_StdSearchName.Image = global::Landemy.Properties.Resources.SearchIcon;
-            this.btn_StdSearchName.Location = new System.Drawing.Point(528, 20);
+            this.btn_StdSearchName.Location = new System.Drawing.Point(603, 26);
+            this.btn_StdSearchName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_StdSearchName.Name = "btn_StdSearchName";
-            this.btn_StdSearchName.Size = new System.Drawing.Size(38, 33);
+            this.btn_StdSearchName.Size = new System.Drawing.Size(43, 42);
             this.btn_StdSearchName.TabIndex = 25;
             this.btn_StdSearchName.UseVisualStyleBackColor = true;
             this.btn_StdSearchName.Click += new System.EventHandler(this.btn_StdSearchName_Click);
@@ -120,9 +135,10 @@
             // btn_StdNationalcodeSearch
             // 
             this.btn_StdNationalcodeSearch.Image = global::Landemy.Properties.Resources.SearchIcon;
-            this.btn_StdNationalcodeSearch.Location = new System.Drawing.Point(789, 20);
+            this.btn_StdNationalcodeSearch.Location = new System.Drawing.Point(902, 26);
+            this.btn_StdNationalcodeSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_StdNationalcodeSearch.Name = "btn_StdNationalcodeSearch";
-            this.btn_StdNationalcodeSearch.Size = new System.Drawing.Size(38, 33);
+            this.btn_StdNationalcodeSearch.Size = new System.Drawing.Size(43, 42);
             this.btn_StdNationalcodeSearch.TabIndex = 24;
             this.btn_StdNationalcodeSearch.UseVisualStyleBackColor = true;
             this.btn_StdNationalcodeSearch.Click += new System.EventHandler(this.btn_StdNationalcodeSearch_Click);
@@ -131,50 +147,53 @@
             // 
             this.txt_NationalSearch.IsNumber = true;
             this.txt_NationalSearch.IsReal = false;
-            this.txt_NationalSearch.Location = new System.Drawing.Point(833, 21);
+            this.txt_NationalSearch.Location = new System.Drawing.Point(952, 27);
+            this.txt_NationalSearch.Margin = new System.Windows.Forms.Padding(5);
             this.txt_NationalSearch.Name = "txt_NationalSearch";
-            this.txt_NationalSearch.Size = new System.Drawing.Size(164, 22);
+            this.txt_NationalSearch.Size = new System.Drawing.Size(187, 28);
             this.txt_NationalSearch.TabIndex = 23;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(997, 29);
+            this.label1.Location = new System.Drawing.Point(1139, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 14);
+            this.label1.Size = new System.Drawing.Size(66, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "کد ملی :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(728, 29);
+            this.label2.Location = new System.Drawing.Point(832, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 14);
+            this.label2.Size = new System.Drawing.Size(35, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "نام :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(440, 29);
+            this.label3.Location = new System.Drawing.Point(503, 37);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 14);
+            this.label3.Size = new System.Drawing.Size(98, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "نام خانوادگی :";
             // 
             // txt_NameSearch
             // 
-            this.txt_NameSearch.Location = new System.Drawing.Point(572, 26);
+            this.txt_NameSearch.Location = new System.Drawing.Point(654, 33);
+            this.txt_NameSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_NameSearch.Name = "txt_NameSearch";
-            this.txt_NameSearch.Size = new System.Drawing.Size(141, 22);
+            this.txt_NameSearch.Size = new System.Drawing.Size(161, 26);
             this.txt_NameSearch.TabIndex = 11;
             // 
             // txt_FamilySearch
             // 
-            this.txt_FamilySearch.Location = new System.Drawing.Point(293, 26);
+            this.txt_FamilySearch.Location = new System.Drawing.Point(335, 33);
+            this.txt_FamilySearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_FamilySearch.Name = "txt_FamilySearch";
-            this.txt_FamilySearch.Size = new System.Drawing.Size(141, 22);
+            this.txt_FamilySearch.Size = new System.Drawing.Size(161, 26);
             this.txt_FamilySearch.TabIndex = 12;
             // 
             // panel1
@@ -203,9 +222,10 @@
             this.panel1.Controls.Add(this.lbl_FirstNameStudent);
             this.panel1.Controls.Add(this.lbl_NationalCodeStudent);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(687, 29);
+            this.panel1.Location = new System.Drawing.Point(785, 29);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(379, 492);
+            this.panel1.Size = new System.Drawing.Size(433, 641);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -213,16 +233,18 @@
             // 
             this.txt_StudentNationalCode.IsNumber = true;
             this.txt_StudentNationalCode.IsReal = false;
-            this.txt_StudentNationalCode.Location = new System.Drawing.Point(146, 9);
+            this.txt_StudentNationalCode.Location = new System.Drawing.Point(167, 12);
+            this.txt_StudentNationalCode.Margin = new System.Windows.Forms.Padding(5);
             this.txt_StudentNationalCode.Name = "txt_StudentNationalCode";
-            this.txt_StudentNationalCode.Size = new System.Drawing.Size(141, 20);
+            this.txt_StudentNationalCode.Size = new System.Drawing.Size(161, 26);
             this.txt_StudentNationalCode.TabIndex = 23;
             // 
             // btn_StudentPicSave
             // 
-            this.btn_StudentPicSave.Location = new System.Drawing.Point(31, 147);
+            this.btn_StudentPicSave.Location = new System.Drawing.Point(35, 189);
+            this.btn_StudentPicSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_StudentPicSave.Name = "btn_StudentPicSave";
-            this.btn_StudentPicSave.Size = new System.Drawing.Size(87, 41);
+            this.btn_StudentPicSave.Size = new System.Drawing.Size(99, 53);
             this.btn_StudentPicSave.TabIndex = 26;
             this.btn_StudentPicSave.Text = "ذخیره تصویر";
             this.btn_StudentPicSave.UseVisualStyleBackColor = true;
@@ -230,29 +252,32 @@
             // 
             // datePicker
             // 
-            this.datePicker.Date = "1400/08/18";
+            this.datePicker.Date = "1400/08/22";
             this.datePicker.FocusColor = System.Drawing.Color.Yellow;
             this.datePicker.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.datePicker.Location = new System.Drawing.Point(146, 173);
+            this.datePicker.Location = new System.Drawing.Point(167, 222);
+            this.datePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.datePicker.Name = "datePicker";
             this.datePicker.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.datePicker.Size = new System.Drawing.Size(141, 24);
+            this.datePicker.Size = new System.Drawing.Size(161, 24);
             this.datePicker.TabIndex = 25;
             // 
             // baseTextBox2
             // 
             this.baseTextBox2.IsNumber = true;
             this.baseTextBox2.IsReal = false;
-            this.baseTextBox2.Location = new System.Drawing.Point(146, 215);
+            this.baseTextBox2.Location = new System.Drawing.Point(167, 276);
+            this.baseTextBox2.Margin = new System.Windows.Forms.Padding(5);
             this.baseTextBox2.Name = "baseTextBox2";
-            this.baseTextBox2.Size = new System.Drawing.Size(141, 22);
+            this.baseTextBox2.Size = new System.Drawing.Size(161, 28);
             this.baseTextBox2.TabIndex = 24;
             // 
             // btn_StudentOpenPic
             // 
-            this.btn_StudentOpenPic.Location = new System.Drawing.Point(31, 100);
+            this.btn_StudentOpenPic.Location = new System.Drawing.Point(35, 129);
+            this.btn_StudentOpenPic.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_StudentOpenPic.Name = "btn_StudentOpenPic";
-            this.btn_StudentOpenPic.Size = new System.Drawing.Size(87, 41);
+            this.btn_StudentOpenPic.Size = new System.Drawing.Size(99, 53);
             this.btn_StudentOpenPic.TabIndex = 22;
             this.btn_StudentOpenPic.Text = "افزودن تصویر";
             this.btn_StudentOpenPic.UseVisualStyleBackColor = true;
@@ -261,20 +286,23 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(25, 8);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 87);
+            this.pictureBox1.Size = new System.Drawing.Size(124, 111);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btn_StudentInsert
             // 
             this.btn_StudentInsert.Image = global::Landemy.Properties.Resources.InsertIcon;
             this.btn_StudentInsert.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_StudentInsert.Location = new System.Drawing.Point(274, 393);
+            this.btn_StudentInsert.Location = new System.Drawing.Point(313, 505);
+            this.btn_StudentInsert.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_StudentInsert.Name = "btn_StudentInsert";
-            this.btn_StudentInsert.Size = new System.Drawing.Size(87, 41);
+            this.btn_StudentInsert.Size = new System.Drawing.Size(99, 53);
             this.btn_StudentInsert.TabIndex = 19;
             this.btn_StudentInsert.Text = "افزودن";
             this.btn_StudentInsert.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -285,9 +313,10 @@
             // 
             this.btn_StudentEdit.Image = global::Landemy.Properties.Resources.Update2Icon;
             this.btn_StudentEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_StudentEdit.Location = new System.Drawing.Point(177, 393);
+            this.btn_StudentEdit.Location = new System.Drawing.Point(202, 505);
+            this.btn_StudentEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_StudentEdit.Name = "btn_StudentEdit";
-            this.btn_StudentEdit.Size = new System.Drawing.Size(87, 41);
+            this.btn_StudentEdit.Size = new System.Drawing.Size(99, 53);
             this.btn_StudentEdit.TabIndex = 20;
             this.btn_StudentEdit.Text = "ویرایش";
             this.btn_StudentEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -298,9 +327,10 @@
             // 
             this.btn_StudentDelete.Image = global::Landemy.Properties.Resources.Delete2Icon;
             this.btn_StudentDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_StudentDelete.Location = new System.Drawing.Point(274, 440);
+            this.btn_StudentDelete.Location = new System.Drawing.Point(313, 566);
+            this.btn_StudentDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_StudentDelete.Name = "btn_StudentDelete";
-            this.btn_StudentDelete.Size = new System.Drawing.Size(87, 41);
+            this.btn_StudentDelete.Size = new System.Drawing.Size(99, 53);
             this.btn_StudentDelete.TabIndex = 18;
             this.btn_StudentDelete.Text = "حذف";
             this.btn_StudentDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -311,121 +341,128 @@
             // 
             this.btn_StudentPrint.Image = global::Landemy.Properties.Resources.PrintIcon;
             this.btn_StudentPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_StudentPrint.Location = new System.Drawing.Point(177, 440);
+            this.btn_StudentPrint.Location = new System.Drawing.Point(202, 566);
+            this.btn_StudentPrint.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_StudentPrint.Name = "btn_StudentPrint";
-            this.btn_StudentPrint.Size = new System.Drawing.Size(87, 41);
+            this.btn_StudentPrint.Size = new System.Drawing.Size(99, 53);
             this.btn_StudentPrint.TabIndex = 17;
             this.btn_StudentPrint.Text = "چاپ";
             this.btn_StudentPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_StudentPrint.UseVisualStyleBackColor = true;
+            this.btn_StudentPrint.Click += new System.EventHandler(this.btn_StudentPrint_Click);
             // 
             // txt_StudentAddress
             // 
-            this.txt_StudentAddress.Location = new System.Drawing.Point(153, 265);
+            this.txt_StudentAddress.Location = new System.Drawing.Point(175, 341);
+            this.txt_StudentAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_StudentAddress.Multiline = true;
             this.txt_StudentAddress.Name = "txt_StudentAddress";
-            this.txt_StudentAddress.Size = new System.Drawing.Size(134, 112);
+            this.txt_StudentAddress.Size = new System.Drawing.Size(153, 143);
             this.txt_StudentAddress.TabIndex = 16;
             // 
             // com_StudentSex
             // 
             this.com_StudentSex.FormattingEnabled = true;
-            this.com_StudentSex.Location = new System.Drawing.Point(146, 142);
+            this.com_StudentSex.Location = new System.Drawing.Point(167, 183);
+            this.com_StudentSex.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.com_StudentSex.Name = "com_StudentSex";
-            this.com_StudentSex.Size = new System.Drawing.Size(141, 22);
+            this.com_StudentSex.Size = new System.Drawing.Size(161, 26);
             this.com_StudentSex.TabIndex = 14;
             // 
             // com_StudentDegreeID_FK
             // 
             this.com_StudentDegreeID_FK.FormattingEnabled = true;
-            this.com_StudentDegreeID_FK.Location = new System.Drawing.Point(146, 110);
+            this.com_StudentDegreeID_FK.Location = new System.Drawing.Point(167, 141);
+            this.com_StudentDegreeID_FK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.com_StudentDegreeID_FK.Name = "com_StudentDegreeID_FK";
-            this.com_StudentDegreeID_FK.Size = new System.Drawing.Size(141, 22);
+            this.com_StudentDegreeID_FK.Size = new System.Drawing.Size(161, 26);
             this.com_StudentDegreeID_FK.TabIndex = 13;
             // 
             // txt_StudentLastName
             // 
-            this.txt_StudentLastName.Location = new System.Drawing.Point(146, 71);
+            this.txt_StudentLastName.Location = new System.Drawing.Point(167, 91);
+            this.txt_StudentLastName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_StudentLastName.Name = "txt_StudentLastName";
-            this.txt_StudentLastName.Size = new System.Drawing.Size(141, 22);
+            this.txt_StudentLastName.Size = new System.Drawing.Size(161, 26);
             this.txt_StudentLastName.TabIndex = 12;
             // 
             // txtStudentFirstName
             // 
-            this.txtStudentFirstName.Location = new System.Drawing.Point(146, 39);
+            this.txtStudentFirstName.Location = new System.Drawing.Point(167, 50);
+            this.txtStudentFirstName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStudentFirstName.Name = "txtStudentFirstName";
-            this.txtStudentFirstName.Size = new System.Drawing.Size(141, 22);
+            this.txtStudentFirstName.Size = new System.Drawing.Size(161, 26);
             this.txtStudentFirstName.TabIndex = 11;
             // 
             // lbl_PhoneStudent
             // 
             this.lbl_PhoneStudent.AutoSize = true;
-            this.lbl_PhoneStudent.Location = new System.Drawing.Point(293, 223);
+            this.lbl_PhoneStudent.Location = new System.Drawing.Point(335, 287);
             this.lbl_PhoneStudent.Name = "lbl_PhoneStudent";
-            this.lbl_PhoneStudent.Size = new System.Drawing.Size(37, 14);
+            this.lbl_PhoneStudent.Size = new System.Drawing.Size(46, 18);
             this.lbl_PhoneStudent.TabIndex = 8;
             this.lbl_PhoneStudent.Text = "تلفن :";
             // 
             // lbl_AddressStudent
             // 
             this.lbl_AddressStudent.AutoSize = true;
-            this.lbl_AddressStudent.Location = new System.Drawing.Point(293, 268);
+            this.lbl_AddressStudent.Location = new System.Drawing.Point(335, 345);
             this.lbl_AddressStudent.Name = "lbl_AddressStudent";
-            this.lbl_AddressStudent.Size = new System.Drawing.Size(43, 14);
+            this.lbl_AddressStudent.Size = new System.Drawing.Size(52, 18);
             this.lbl_AddressStudent.TabIndex = 7;
             this.lbl_AddressStudent.Text = "آدرس :";
             // 
             // lbl_DateofBirthStudent
             // 
             this.lbl_DateofBirthStudent.AutoSize = true;
-            this.lbl_DateofBirthStudent.Location = new System.Drawing.Point(293, 183);
+            this.lbl_DateofBirthStudent.Location = new System.Drawing.Point(335, 235);
             this.lbl_DateofBirthStudent.Name = "lbl_DateofBirthStudent";
-            this.lbl_DateofBirthStudent.Size = new System.Drawing.Size(59, 14);
+            this.lbl_DateofBirthStudent.Size = new System.Drawing.Size(74, 18);
             this.lbl_DateofBirthStudent.TabIndex = 6;
             this.lbl_DateofBirthStudent.Text = "تاریخ تولد :";
             // 
             // lbl_SexOfStudent
             // 
             this.lbl_SexOfStudent.AutoSize = true;
-            this.lbl_SexOfStudent.Location = new System.Drawing.Point(293, 145);
+            this.lbl_SexOfStudent.Location = new System.Drawing.Point(335, 186);
             this.lbl_SexOfStudent.Name = "lbl_SexOfStudent";
-            this.lbl_SexOfStudent.Size = new System.Drawing.Size(55, 14);
+            this.lbl_SexOfStudent.Size = new System.Drawing.Size(68, 18);
             this.lbl_SexOfStudent.TabIndex = 5;
             this.lbl_SexOfStudent.Text = "جنسیت :";
             // 
             // lbl_degreeOfStudent
             // 
             this.lbl_degreeOfStudent.AutoSize = true;
-            this.lbl_degreeOfStudent.Location = new System.Drawing.Point(293, 113);
+            this.lbl_degreeOfStudent.Location = new System.Drawing.Point(335, 145);
             this.lbl_degreeOfStudent.Name = "lbl_degreeOfStudent";
-            this.lbl_degreeOfStudent.Size = new System.Drawing.Size(43, 14);
+            this.lbl_degreeOfStudent.Size = new System.Drawing.Size(53, 18);
             this.lbl_degreeOfStudent.TabIndex = 4;
             this.lbl_degreeOfStudent.Text = "مدرک :";
             // 
             // lbl_LastNameStudent
             // 
             this.lbl_LastNameStudent.AutoSize = true;
-            this.lbl_LastNameStudent.Location = new System.Drawing.Point(293, 79);
+            this.lbl_LastNameStudent.Location = new System.Drawing.Point(335, 102);
             this.lbl_LastNameStudent.Name = "lbl_LastNameStudent";
-            this.lbl_LastNameStudent.Size = new System.Drawing.Size(80, 14);
+            this.lbl_LastNameStudent.Size = new System.Drawing.Size(98, 18);
             this.lbl_LastNameStudent.TabIndex = 3;
             this.lbl_LastNameStudent.Text = "نام خانوادگی :";
             // 
             // lbl_FirstNameStudent
             // 
             this.lbl_FirstNameStudent.AutoSize = true;
-            this.lbl_FirstNameStudent.Location = new System.Drawing.Point(293, 42);
+            this.lbl_FirstNameStudent.Location = new System.Drawing.Point(335, 54);
             this.lbl_FirstNameStudent.Name = "lbl_FirstNameStudent";
-            this.lbl_FirstNameStudent.Size = new System.Drawing.Size(29, 14);
+            this.lbl_FirstNameStudent.Size = new System.Drawing.Size(35, 18);
             this.lbl_FirstNameStudent.TabIndex = 2;
             this.lbl_FirstNameStudent.Text = "نام :";
             // 
             // lbl_NationalCodeStudent
             // 
             this.lbl_NationalCodeStudent.AutoSize = true;
-            this.lbl_NationalCodeStudent.Location = new System.Drawing.Point(293, 9);
+            this.lbl_NationalCodeStudent.Location = new System.Drawing.Point(335, 12);
             this.lbl_NationalCodeStudent.Name = "lbl_NationalCodeStudent";
-            this.lbl_NationalCodeStudent.Size = new System.Drawing.Size(54, 14);
+            this.lbl_NationalCodeStudent.Size = new System.Drawing.Size(66, 18);
             this.lbl_NationalCodeStudent.TabIndex = 1;
             this.lbl_NationalCodeStudent.Text = "کد ملی :";
             // 
@@ -434,8 +471,9 @@
             this.panel2.Controls.Add(this.dgv_Student);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 29);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(689, 492);
+            this.panel2.Size = new System.Drawing.Size(787, 641);
             this.panel2.TabIndex = 0;
             // 
             // dgv_Student
@@ -444,8 +482,10 @@
             this.dgv_Student.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnRowNumber});
             this.dgv_Student.Location = new System.Drawing.Point(3, 0);
+            this.dgv_Student.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgv_Student.Name = "dgv_Student";
-            this.dgv_Student.Size = new System.Drawing.Size(685, 492);
+            this.dgv_Student.RowHeadersWidth = 51;
+            this.dgv_Student.Size = new System.Drawing.Size(783, 633);
             this.dgv_Student.TabIndex = 0;
             this.dgv_Student.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Student_CellClick);
             this.dgv_Student.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_Student_CellFormatting);
@@ -453,7 +493,9 @@
             // ColumnRowNumber
             // 
             this.ColumnRowNumber.HeaderText = "ردیف";
+            this.ColumnRowNumber.MinimumWidth = 6;
             this.ColumnRowNumber.Name = "ColumnRowNumber";
+            this.ColumnRowNumber.Width = 125;
             // 
             // datePicker1
             // 
@@ -470,26 +512,16 @@
             // 
             this.erp_Student.ContainerControl = this;
             // 
-            // btn_SearchMoreStudent
-            // 
-            this.btn_SearchMoreStudent.Location = new System.Drawing.Point(12, 25);
-            this.btn_SearchMoreStudent.Name = "btn_SearchMoreStudent";
-            this.btn_SearchMoreStudent.Size = new System.Drawing.Size(102, 23);
-            this.btn_SearchMoreStudent.TabIndex = 27;
-            this.btn_SearchMoreStudent.Text = "جستجوی بیشتر";
-            this.btn_SearchMoreStudent.UseVisualStyleBackColor = true;
-            this.btn_SearchMoreStudent.Click += new System.EventHandler(this.btn_SearchMoreStudent_Click);
-            // 
             // StudentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 617);
+            this.ClientSize = new System.Drawing.Size(1218, 793);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grp_SearchStudent);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "StudentForm";
-            this.Text = "StudentForm";
             this.Load += new System.EventHandler(this.StudentForm_Load);
             this.Controls.SetChildIndex(this.grp_SearchStudent, 0);
             this.Controls.SetChildIndex(this.panel1, 0);

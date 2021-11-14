@@ -12,6 +12,7 @@ namespace Landemy.Forms
 {
     public partial class TeacherForm : Forms.MasterForm.frmMaster
     {
+        bool ChangePicture = false;
         public TeacherForm()
         {
             InitializeComponent();
@@ -248,6 +249,67 @@ namespace Landemy.Forms
         private void dgv_Teacher_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btn_TeacherAddPic_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Image|*.jpg;*.bmp;*.png;";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    pic_Teacher.Image = Image.FromFile(openFileDialog.FileName);
+                    ChangePicture = true;
+                }
+                pic_Teacher.Tag = openFileDialog.FileName;
+            }
+            catch (Exception ex)
+            {
+                MsgBox.Show(ex.Message);
+                throw;
+            }
+        }
+
+        private void btn_TeacherSavePic_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Image|*.jpg";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                App_Source.Shared.MyFile.CopyFile(pic_Teacher.Tag.ToString(), saveFileDialog.FileName);
+                MsgBox.Show("فایل مورد نظر کپی شد", "کپی فایل");
+            }
+        }
+
+        private void btn_TeacherMoreSearch_Click(object sender, EventArgs e)
+        {
+            Forms.SearchTeacherForm searchTeacherForm = new Forms.SearchTeacherForm();
+            searchTeacherForm.StrFormName = "جستجوی استاد";
+            searchTeacherForm.ShowDialog();
+            //----------------------------------------------------------------------------------
+            if (searchTeacherForm.SendParameters > 0)
+            {
+                if (searchTeacherForm.dgv_SearchTeacherMore.Rows.Count > 1)
+                {
+                    txt_TeacherNationalCode.Text = searchTeacherForm.dgv_SearchTeacherMore.CurrentRow.Cells["NationalCode"].Value.ToString();
+                    txt_TeacherNationalCode.Tag = searchTeacherForm.dgv_SearchTeacherMore.CurrentRow.Cells["ID"].Value.ToString();
+                    txt_TeacherName.Text = searchTeacherForm.dgv_SearchTeacherMore.CurrentRow.Cells["Name"].Value.ToString();
+                    txt_TeacherLastName.Text = searchTeacherForm.dgv_SearchTeacherMore.CurrentRow.Cells["LastName"].Value.ToString();
+                    com_TeacherDegree.Text = searchTeacherForm.dgv_SearchTeacherMore.CurrentRow.Cells["DegreeID"].Value.ToString();
+                    com_TeahcerSex.Text = searchTeacherForm.dgv_SearchTeacherMore.CurrentRow.Cells["Sex"].Value.ToString();
+                    datePicker1.Text = searchTeacherForm.dgv_SearchTeacherMore.CurrentRow.Cells["DateOfBirth"].Value.ToString();
+                    txt_TeacherAddress.Text = searchTeacherForm.dgv_SearchTeacherMore.CurrentRow.Cells["Address"].Value.ToString();
+                    txt_TeacherPhone.Text = searchTeacherForm.dgv_SearchTeacherMore.CurrentRow.Cells["Phone"].Value.ToString();
+                //    if (System.IO.File.Exists("StudentImage/" + txt_StudentNationalCode.Tag.ToString() + ".jpg"))
+                //    {
+                //        pictureBox1.Image = Image.FromFile("StudentImage/" + txt_StudentNationalCode.Tag.ToString() + ".jpg");
+                //        pictureBox1.Tag = "StudentImage/" + txt_StudentNationalCode.Tag.ToString() + ".jpg";
+                //    }
+                //    else
+                //        pictureBox1.Image = null;
+                }
+            }
         }
     }
 }
